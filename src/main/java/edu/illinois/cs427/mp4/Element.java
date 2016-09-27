@@ -1,5 +1,3 @@
-package edu.illinois.cs427.mp4;
-
 /**
  * An abstract class to represent an entity in the library.
  * The element can be either a book or a collection of books.
@@ -7,6 +5,7 @@ package edu.illinois.cs427.mp4;
  */
 public abstract class Element {
     private Collection parentCollection;
+    private String className;
     
     /**
      * Get the parent collection of this element.
@@ -14,9 +13,16 @@ public abstract class Element {
      * @return parent collection
      */
     public Collection getParentCollection() {
-        return parentCollection;
+        return this.parentCollection;
     }
-
+    
+    public void setClassName(String name) {
+    	this.className = name;
+    }
+    
+    public String getClassName() {
+    	return this.className;
+    }
     /**
      * Set the parent collection for this element.
      *

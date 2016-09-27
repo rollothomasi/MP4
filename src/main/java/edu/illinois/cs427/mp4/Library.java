@@ -1,6 +1,5 @@
-package edu.illinois.cs427.mp4;
-
-import java.util.List;
+import java.util.*;
+import java.io.*;
 
 /**
  * Container class for all the collections (that eventually contain books).
@@ -14,6 +13,7 @@ public final class Library {
      */
     public Library() {
         // TODO implement this
+    	collections = new ArrayList<Collection>();
     }
 
     /**
@@ -23,6 +23,16 @@ public final class Library {
      */
     public Library(String fileName) {
         // TODO implement this
+    	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    	String str = "";
+    	try(){
+    		
+    	}
+    	catch(){
+    		while((str=br.readLine())!=null) {
+        		
+        	}
+    	}
     }
 
     /**

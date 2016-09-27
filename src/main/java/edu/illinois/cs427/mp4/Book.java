@@ -1,6 +1,5 @@
-package edu.illinois.cs427.mp4;
-
-import java.util.List;
+import java.util.*;
+import com.google.gson.Gson;
 
 /**
  * This class contains the information needed to represent a book.
@@ -17,9 +16,11 @@ public final class Book extends Element {
      */
     public Book(String title, String author) {
         // TODO implement this
-        
+        this.title = title;
+        this.author = author;
+        this.setClassName("Book");
     }
-
+    
     /**
      * Builds a book from the string representation, 
      * which contains the title and author of the book. 
@@ -28,6 +29,12 @@ public final class Book extends Element {
      */
     public Book(String stringRepresentation) {
         // TODO implement this
+    	Gson gson = new Gson();
+    	Book book = gson.fromJson(stringRepresentation, Book.class);
+    	this.title = book.title;
+    	this.author = book.author;
+    	this.setClassName("Book");
+    	return;
     }
 
     /**
@@ -38,7 +45,8 @@ public final class Book extends Element {
      */
     public String getStringRepresentation() {
         // TODO implement this
-        return null;
+    	Gson gson = new Gson();
+    	return gson.toJson(new Book(this.title, this.author));
     }
 
     /**
@@ -55,6 +63,12 @@ public final class Book extends Element {
      */
     public List<Collection> getContainingCollections() {
         // TODO implement this
+    	List<Collection> collection = new ArrayList<Collection>();
+    	Element cur = this;
+    	while(cur.getParentCollection()!=null){
+    		cur = cur.getParentCollection();
+    		collection.add((Collection)cur);
+    	}
         return null;
     }
 
@@ -65,7 +79,7 @@ public final class Book extends Element {
      */
     public String getTitle() {
         // TODO implement this
-        return null;
+        return this.title;
     }
 
     /**
@@ -75,6 +89,6 @@ public final class Book extends Element {
      */
     public String getAuthor() {
         // TODO implement this
-        return null;
+        return this.author;
     }
 }
