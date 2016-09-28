@@ -1,9 +1,11 @@
 package edu.illinois.cs427.mp4;
 
 import org.junit.Assert.*;
-import org.junit.Test;
+import org.junit.Test.*;
 
 public class LibraryTest {
+    
+    @Test
     public void testLibraryConstructorFromFile1() {
         // Library testLibrary = new Library();
         // Collection testCollection = new Collection("TestCollection");
@@ -20,6 +22,7 @@ public class LibraryTest {
         // assertTrue(loadedLibraryCollections.get(0).getName().equals("TestCollection"));
     }
 
+    @Test
     public void testGetCollections1() {
         // Library testLibrary = new Library();
         // Collection testCollection = new Collection("TestCollection");
@@ -33,6 +36,7 @@ public class LibraryTest {
         // assertTrue(retrievedCollections.get(0).getName().equals("TestCollection"));
     }
 
+    @Test
     public void testSaveLibraryToFile1() {
         // Library testLibrary = new Library();
         // Collection testCollection = new Collection("TestCollection");
