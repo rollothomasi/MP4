@@ -1,6 +1,6 @@
 package edu.illinois.cs427.mp4;
 
-import static.org.junit.Assert.*;
+import org.junit.Assert.*;
 import org.junit.Test;
 
 public class CollectionTest {
