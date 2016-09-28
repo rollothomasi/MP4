@@ -23,15 +23,17 @@ public final class Library {
      */
     public Library(String fileName) {
         // TODO implement this
-    	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+    	collections = new ArrayList<Collection>();
     	String str = "";
-    	try(){
-    		
-    	}
-    	catch(){
+    	try {
+    		BufferedReader br = new BufferedReader(new FileReader(fileName));
     		while((str=br.readLine())!=null) {
-        		
+        		Collection collection = Collection.restoreCollection(str);
+        		collections.add(collection);
         	}
+    	}
+    	catch(Exception e){
+    		e.printStackTrace();
     	}
     }
 
@@ -42,7 +44,33 @@ public final class Library {
      */
     public void saveLibraryToFile(String fileName) {
         // TODO implement this
-    }
+    	if(collections==null || collections.size()==0)
+    		return;
+    	BufferedWriter bw = null;
+    	try {
+    		File file = new File(fileName);
+    		if (!file.exists()) {
+    			file.createNewFile();
+			}
+    		bw = new BufferedWriter(new FileWriter(fileName));
+    		for(Collection collection:collections) {
+        		String str = collection.getStringRepresentation()+"\n";
+        		bw.write(str);
+        	}
+    	}
+    	catch(Exception e){
+    		e.printStackTrace();
+    	}
+    	finally{
+    		try{
+    			if(bw!=null)
+    				bw.close();
+			}
+			catch(Exception e){
+				System.out.println("Error in closing the BufferedWriter"+e);
+			}
+    		}
+    	}
 
     /**
      * Returns the collections contained in the library.
@@ -51,6 +79,6 @@ public final class Library {
      */
     public List<Collection> getCollections() {
         // TODO implement this
-        return null;
+        return this.collections;
     }
 }
