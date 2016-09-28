@@ -4,6 +4,8 @@ import org.junit.Assert.*;
 import org.junit.Test;
 
 public class CollectionTest {
+    
+    @Test
     public void testRestoreCollection1() {
         // Collection testCollection = new Collection("TestCollection");
         // Book testBook = new Book("TestBook", "TestAuthor");
@@ -19,6 +21,7 @@ public class CollectionTest {
         // assertTrue(firstElement.getTitle().equals("TestAuthor"));
     }
 
+    @Test
     public void testGetStringRepresentation1() {
         //Collection testCollection = new Collection("TestCollection");
         //Book testBook = new Book("TestBook", "TestAuthor");
@@ -32,6 +35,7 @@ public class CollectionTest {
         //assertTrue(stringRepresentation.equals(testCollection2.getStringRepresentation()));
     }
 
+    @Test
     public void testAddElement1() {
         // Collection testCollection = new Collection("TestCollection");
         // Book testBook = new Book("TestBook", "TestAuthor");
@@ -42,6 +46,7 @@ public class CollectionTest {
         // assertTrue(elementsInCollection.contains(testBook));
     }
 
+    @Test
     public void testDeleteElement1() {
         // Collection testCollection = new Collection("TestCollection");
         // Book testBook = new Book("TestBook", "TestAuthor");
