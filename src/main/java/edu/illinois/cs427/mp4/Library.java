@@ -17,6 +17,10 @@ public final class Library {
         // TODO implement this
     	collections = new ArrayList<Collection>();
     }
+	
+	public void addCollection(Collection toAdd) {
+		collections.add(toAdd);
+	}
 
     /**
      * Builds a new library and restores its contents from the given file.
