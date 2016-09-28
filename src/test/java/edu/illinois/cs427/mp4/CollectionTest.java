@@ -7,56 +7,56 @@ public class CollectionTest {
     
     @Test
     public void testRestoreCollection1() {
-        // Collection testCollection = new Collection("TestCollection");
-        // Book testBook = new Book("TestBook", "TestAuthor");
+         Collection testCollection = new Collection("TestCollection");
+         Book testBook = new Book("TestBook", "TestAuthor");
 
-        // testCollection.addElement(testBook);
-        // String stringRepresentation = testCollection.getStringRepresentation();
+         testCollection.addElement(testBook);
+         String stringRepresentation = testCollection.getStringRepresentation();
 
-        // Collection restoredCollection = Collection.restoreCollection(stringRepresentation);
-        // assertTrue(restoredCollection.getName().equals("TestCollection"));
-        // List<Element> elementsInCollection = restoredCollection.getElements();
-        // Book firstElement = (Book)elementsInCollection.get(0);
-        // assertTrue(firstElement.getTitle().equals("TestBook"));
-        // assertTrue(firstElement.getTitle().equals("TestAuthor"));
+         Collection restoredCollection = Collection.restoreCollection(stringRepresentation);
+         assertTrue(restoredCollection.getName().equals("TestCollection"));
+         List<Element> elementsInCollection = restoredCollection.getElements();
+         Book firstElement = (Book)elementsInCollection.get(0);
+         assertTrue(firstElement.getTitle().equals("TestBook"));
+         assertTrue(firstElement.getTitle().equals("TestAuthor"));
     }
 
     @Test
     public void testGetStringRepresentation1() {
-        //Collection testCollection = new Collection("TestCollection");
-        //Book testBook = new Book("TestBook", "TestAuthor");
+        Collection testCollection = new Collection("TestCollection");
+        Book testBook = new Book("TestBook", "TestAuthor");
 
-        //testCollection.addElement(testBook);
+        testCollection.addElement(testBook);
 
-        //String stringRepresentation = testCollection.getStringRepresentation();
+        String stringRepresentation = testCollection.getStringRepresentation();
 
-        //Collection testCollection2 = new Collection("TestCollection");
-        //testCollection2.addElement(testBook);
-        //assertTrue(stringRepresentation.equals(testCollection2.getStringRepresentation()));
+        Collection testCollection2 = new Collection("TestCollection");
+        testCollection2.addElement(testBook);
+        assertTrue(stringRepresentation.equals(testCollection2.getStringRepresentation()));
     }
 
     @Test
     public void testAddElement1() {
-        // Collection testCollection = new Collection("TestCollection");
-        // Book testBook = new Book("TestBook", "TestAuthor");
+         Collection testCollection = new Collection("TestCollection");
+         Book testBook = new Book("TestBook", "TestAuthor");
 
-        // testCollection.addElement(testBook);
+         testCollection.addElement(testBook);
 
-        // List<Element> elementsInCollection = testCollection.getElements();
-        // assertTrue(elementsInCollection.contains(testBook));
+         List<Element> elementsInCollection = testCollection.getElements();
+         assertTrue(elementsInCollection.contains(testBook));
     }
 
     @Test
     public void testDeleteElement1() {
-        // Collection testCollection = new Collection("TestCollection");
-        // Book testBook = new Book("TestBook", "TestAuthor");
+         Collection testCollection = new Collection("TestCollection");
+         Book testBook = new Book("TestBook", "TestAuthor");
 
-        // testCollection.addElement(testBook);
-        // List<Element> elementsInCollection = testCollection.getElements();
-        // assertTrue(elementsInCollection.contains(testBook));
+         testCollection.addElement(testBook);
+         List<Element> elementsInCollection = testCollection.getElements();
+         assertTrue(elementsInCollection.contains(testBook));
 
-        // testCollection.deleteElement(testBook);
-        // elementsInCollection = testCollection.getElements();
-        // assertFalse(elementsInCollection.contains(testBook));
+         testCollection.deleteElement(testBook);
+         elementsInCollection = testCollection.getElements();
+         assertFalse(elementsInCollection.contains(testBook));
     }
 }
