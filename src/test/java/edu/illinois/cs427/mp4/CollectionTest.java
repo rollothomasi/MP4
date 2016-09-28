@@ -140,7 +140,7 @@ public class CollectionTest {
     }
 
     @Test
-    public void testDeleteElement2() {
+    public void testDeleteElement3() {
         Collection testCollection = new Collection("TestCollection");
         Collection testCollection2 = new Collection("TestCollection2");
         Book testBook = new Book("TestBook", "TestAuthor");
