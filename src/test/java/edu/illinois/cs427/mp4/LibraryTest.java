@@ -38,13 +38,20 @@ public class LibraryTest {
 
     @Test
     public void testSaveLibraryToFile1() {
-         Library testLibrary = new Library();
-         Collection testCollection = new Collection("TestCollection");
-         Book testBook = new Book("TestBook", "TestAuthor");
+        Library testLibrary = new Library();
+        Collection testCollection = new Collection("TestCollection");
+        Book testBook = new Book("TestBook", "TestAuthor");
 
-         testCollection.addElement(testBook);
-         testLibrary.addCollection(testCollection);
-         testLibrary.saveLibraryToFile("TestSavedLibrary.json");
-         assertTrue(new File("TestSavedLibrary.json").isFile());
+        testCollection.addElement(testBook);
+        testLibrary.addCollection(testCollection);
+        testLibrary.saveLibraryToFile("TestSavedLibrary.json");
+        assertTrue(new File("TestSavedLibrary.json").isFile());
+    }
+
+    @Test
+    public void testSaveLibraryToFile2() {
+        Library testLibrary = new Library();
+        testLibrary.saveLibraryToFile("TestSavedLibrary.json");
+        assertFalse(new File("TestSavedLibrary.json").isFile());
     }
 }
