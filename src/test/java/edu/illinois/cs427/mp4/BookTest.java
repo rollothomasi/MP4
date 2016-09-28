@@ -1,5 +1,4 @@
 package edu.illinois.cs427.mp4;
-
 import static.org.junit.Assert.*;
 import org.junit.Test;
 
@@ -19,11 +18,11 @@ public class BookTest {
 
     public void testGetStringRepresentation1() {
         //TODO implement this
-i       assertEquals("StoryJoe", b.getStringRepresentation());
+        assertEquals("{\"title\":\"Story\",\"author\":\"Joe\",\"className\":\"Book\"}", b.getStringRepresentation());
     }
 
     public void testGetContainingCollections1() {
         //TODO implement this
-
+        assertEquals(b.getContainingCollections.size(),0);
     }
 }
