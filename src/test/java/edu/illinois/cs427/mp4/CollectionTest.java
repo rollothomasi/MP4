@@ -4,11 +4,6 @@ import org.junit.Assert.*;
 import org.junit.Test;
 
 public class CollectionTest {
-    @Test
-    public void testCreatingCollection1() {
-        Collection collection = new Collection("Lu");
-        Assert.assertTrue(collection.name.equals("Lu") && collection.elements.size() && elements.collection);
-    }
     
     @Test
     public void testRestoreCollection1() {
