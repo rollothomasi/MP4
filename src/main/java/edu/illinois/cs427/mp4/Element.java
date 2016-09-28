@@ -1,3 +1,5 @@
+package edu.illinois.cs427.mp4;
+
 /**
  * An abstract class to represent an entity in the library.
  * The element can be either a book or a collection of books.

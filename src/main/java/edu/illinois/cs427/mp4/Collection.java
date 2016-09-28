@@ -1,5 +1,6 @@
-import java.util.*;
+package edu.illinois.cs427.mp4;
 
+import java.util.*;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 

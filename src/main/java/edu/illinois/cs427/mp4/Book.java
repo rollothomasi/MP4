@@ -1,3 +1,5 @@
+package edu.illinois.cs427.mp4;
+
 import java.util.*;
 import com.google.gson.Gson;
 
@@ -15,6 +17,7 @@ public final class Book extends Element {
      * @param author the author of the book
      */
     public Book(String title, String author) {
+        // TODO implement this
         this.title = title;
         this.author = author;
         this.setClassName("Book");
@@ -27,6 +30,7 @@ public final class Book extends Element {
      * @param stringRepresentation the string representation
      */
     public Book(String stringRepresentation) {
+        // TODO implement this
     	Gson gson = new Gson();
     	Book book = gson.fromJson(stringRepresentation, Book.class);
     	this.title = book.title;
@@ -67,7 +71,7 @@ public final class Book extends Element {
     		cur = cur.getParentCollection();
     		collection.add((Collection)cur);
     	}
-        return null;
+        return collection;
     }
 
     /**
@@ -76,6 +80,7 @@ public final class Book extends Element {
      * @return the title
      */
     public String getTitle() {
+        // TODO implement this
         return this.title;
     }
 
@@ -85,6 +90,7 @@ public final class Book extends Element {
      * @return the author
      */
     public String getAuthor() {
+        // TODO implement this
         return this.author;
     }
 }

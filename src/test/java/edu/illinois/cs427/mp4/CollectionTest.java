@@ -1,10 +1,15 @@
 package edu.illinois.cs427.mp4;
 
-import org.junit.Assert.*;
+import org.junit.Assert;
 import org.junit.Test;
 
 public class CollectionTest {
-    
+    @Test
+    public void testCreatingCollection1() {
+        Collection collection = new Collection("Lu");
+        Assert.assertTrue(collection.name.equals("Lu") && collection.elements.size() && elements.collection);
+    }
+
     @Test
     public void testRestoreCollection1() {
         // Collection testCollection = new Collection("TestCollection");
@@ -23,16 +28,13 @@ public class CollectionTest {
 
     @Test
     public void testGetStringRepresentation1() {
-        //Collection testCollection = new Collection("TestCollection");
-        //Book testBook = new Book("TestBook", "TestAuthor");
+        // Collection testCollection = new Collection("TestCollection");
+        // Book testBook = new Book("TestBook", "TestAuthor");
 
-        //testCollection.addElement(testBook);
+        // testCollection.addElement(testBook);
 
-        //String stringRepresentation = testCollection.getStringRepresentation();
-
-        //Collection testCollection2 = new Collection("TestCollection");
-        //testCollection2.addElement(testBook);
-        //assertTrue(stringRepresentation.equals(testCollection2.getStringRepresentation()));
+        // String stringRepresentation = testCollection.getStringRepresentation();
+        // assertTrue(stringRepresentation.equals("$TestCollection@#$TestBook*TestAuthor*$#$"));
     }
 
     @Test
