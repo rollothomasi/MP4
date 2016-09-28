@@ -29,7 +29,7 @@ public final class Library {
     	String str = "";
     	try {
     		BufferedReader br = new BufferedReader(new FileReader(fileName));
-    		while((str=br.readLine())!=null) {
+    		while((str=br.readLine())!=null && str.length()!=0) {
         		Collection collection = Collection.restoreCollection(str);
         		collections.add(collection);
         	}
@@ -73,6 +73,10 @@ public final class Library {
 			}
     		}
     	}
+
+    public void addCollection(Collection collection) {
+        this.collections.add(collection);
+    }
 
     /**
      * Returns the collections contained in the library.

@@ -1,0 +1,2 @@
+{"name":"Bookstore","elements":[{"name":"subBookstore","elements":[{"title":"Story","author":"Joe","className":"Book"},{"title":"Hillary!!","author":"lu","className":"Book"}]},{"title":"president!!","author":"lu","className":"Book"}]}
+{"name":"Bookstore","elements":[{"title":"Hillary!!","author":"lu","className":"Book"}]}

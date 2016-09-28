@@ -33,6 +33,21 @@ public class BookTest {
     }
 
     @Test
+    public void testGetParentCollection(){
+        Book b = new Book("Story","Joe");
+        Collection collection = new Collection("name");
+    }
+
+    @Test
+    public void testGetContainingCollections2() {
+        //TODO implement this
+        Book b = new Book("Story","Joe");
+        Collection collection = new Collection("name");
+        collection.addElement(b);
+        Assert.assertTrue(b.getContainingCollections().get(0).getName().equals("name"));
+    }
+
+    @Test
     public void testStringRepresentationToObject() {
         //TODO implement this
         String str = "{\"title\":\"Story\",\"author\":\"Joe\",\"className\":\"Book\"}";
