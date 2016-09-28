@@ -1,7 +1,7 @@
 package edu.illinois.cs427.mp4;
 
 import org.junit.Assert.*;
-import org.junit.Test.*;
+import org.junit.Test;
 
 public class LibraryTest {
     
