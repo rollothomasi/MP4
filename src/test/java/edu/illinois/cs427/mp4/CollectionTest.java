@@ -20,13 +20,16 @@ public class CollectionTest {
     }
 
     public void testGetStringRepresentation1() {
-        // Collection testCollection = new Collection("TestCollection");
-        // Book testBook = new Book("TestBook", "TestAuthor");
+        //Collection testCollection = new Collection("TestCollection");
+        //Book testBook = new Book("TestBook", "TestAuthor");
 
-        // testCollection.addElement(testBook);
+        //testCollection.addElement(testBook);
 
-        // String stringRepresentation = testCollection.getStringRepresentation();
-        // assertTrue(stringRepresentation.equals("$TestCollection@#$TestBook*TestAuthor*$#$"));
+        //String stringRepresentation = testCollection.getStringRepresentation();
+
+        //Collection testCollection2 = new Collection("TestCollection");
+        //testCollection2.addElement(testBook);
+        //assertTrue(stringRepresentation.equals(testCollection2.getStringRepresentation()));
     }
 
     public void testAddElement1() {
